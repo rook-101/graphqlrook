@@ -1,5 +1,5 @@
 type Query {
-    getPlayerById(id: ID): Player
+    getPlayerById(id: ID): Player!
     getPlayerByName(name: String): Player
     getAllPlayers: [Player]
     getPlayersByClub(club: String): [Player]
