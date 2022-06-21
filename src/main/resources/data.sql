@@ -4,3 +4,7 @@ insert into player(name, age, club, nationality) values ('Teemu Pukki', 31, 'Nor
 insert into player(name, age, club, nationality) values ('Ivan Toney', 25, 'Brentford', 'England');
 insert into player(name, age, club, nationality) values ('Harry Kane', 32, 'Tottenham Hotspur', 'England');
 insert into player(name, age, club, nationality) values ('Mason Mount', 22, 'Chelsea', 'England');
+
+insert into customer(name) values('X');
+insert into customer(name) values('Y');
+insert into customer(name) values('Z');
