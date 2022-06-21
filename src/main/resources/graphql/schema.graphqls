@@ -4,6 +4,7 @@ type Query {
     getAllPlayers: [Player]
     getPlayersByClub(club: String): [Player]
     getPlayersByNationality(nationality: String): [Player]
+    customers:[Customer]
 }
 
 type Mutation {
@@ -26,4 +27,9 @@ input PlayerInput {
     age: Int!
     club: String!
     nationality: String!
+}
+
+type Customer {
+    id: ID
+    name: String
 }
