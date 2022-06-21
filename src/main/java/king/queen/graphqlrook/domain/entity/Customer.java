@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
-@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 public class Customer {
@@ -17,4 +16,8 @@ public class Customer {
 
     @JsonProperty("name")
     String name;
+
+    public Customer(String name) {
+        this.name = name;
+    }
 }

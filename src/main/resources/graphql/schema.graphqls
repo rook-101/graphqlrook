@@ -5,6 +5,7 @@ type Query {
     getPlayersByClub(club: String): [Player]
     getPlayersByNationality(nationality: String): [Player]
     customers:[Customer]
+    customerByName(name: String): Customer
 }
 
 type Mutation {
@@ -12,6 +13,7 @@ type Mutation {
     updatePlayer(id: ID, playerInput: PlayerInput!): Player
     deletePlayerById(id: ID): Player
     deletePlayerByName(name: String): Player
+    addCustomer(name: String): Customer
 }
 
 type Player {
