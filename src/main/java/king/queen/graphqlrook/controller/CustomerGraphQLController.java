@@ -3,6 +3,7 @@ package king.queen.graphqlrook.controller;
 import king.queen.graphqlrook.domain.entity.Customer;
 import king.queen.graphqlrook.domain.usecase.CustomerService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.stereotype.Controller;
 import reactor.core.publisher.Flux;
@@ -12,8 +13,8 @@ import reactor.core.publisher.Flux;
 public class CustomerGraphQLController {
     private final CustomerService customerService;
 
-    @SchemaMapping(typeName = "Query", field = "customers")
+    @QueryMapping
     Flux<Customer> customers() {
-        return customerService.execute();
+        return customerService.findAll();
     }
 }
