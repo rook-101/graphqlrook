@@ -2,19 +2,16 @@ package king.queen.graphqlrook.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-public class Customer {
+public class Order {
 
-    @JsonProperty("id")
     @Id
+    @JsonProperty("id")
     Integer id;
-
-    @JsonProperty("name")
-    String name;
+    @JsonProperty("customerId")
+    Integer customerId;
 }

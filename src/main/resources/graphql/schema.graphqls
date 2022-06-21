@@ -29,7 +29,13 @@ input PlayerInput {
     nationality: String!
 }
 
+type Order {
+    id: ID
+    customerId: ID
+}
+
 type Customer {
     id: ID
     name: String
+    orders: [Order]
 }
